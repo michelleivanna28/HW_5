@@ -1,2 +1,66 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+Console.WriteLine("-[H O M E W O R K  5]-");
+string name, gender, Student_ID, a, b, correction;
+
+// Form questions 
+Console.WriteLine("Hello, please fill in this identity form");
+int date;
+    Console.WriteLine("\n1. Enter your name:");
+    name = Console.ReadLine();
+    Console.WriteLine("2. Enter your gender (male/female): ");
+    gender = Console.ReadLine();
+    Console.WriteLine("3. Enter your birthday (YYYYMMDD): ");
+    date = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("4. Enter your student ID: ");
+    Student_ID = Console.ReadLine();
+
+//Form Confirmation 
+do
+{
+    Console.WriteLine("\n-----------------------------------------------------");
+    Console.WriteLine("please confirm your information");
+    Console.WriteLine("your name is " + name);
+    Console.WriteLine("your gender is " + gender);
+    Console.WriteLine("your birthday is " + date);
+    Console.WriteLine("your student ID is " + Student_ID);
+    Console.WriteLine("-----------------------------------------------------");
+    Console.WriteLine("if correct, press 1. To edit, press 2");
+    Console.WriteLine("-----------------------------------------------------");
+
+//one or more data is wrong. type the wrong data category and edit the form
+    a = Console.ReadLine();
+    if (a=="2");
+    {
+        Console.WriteLine("\nWhich information that you want to edit (name/gender/birthday/student ID):");
+        correction = Console.ReadLine();
+
+            switch(correction)
+            {
+            case "name":
+                Console.Write("\n please re-enter your name: ");
+                name = Console.ReadLine();
+                continue;
+            case "gender":
+                Console.Write("\n please re-enter your gender: ");
+                gender = Console.ReadLine();
+                continue;
+            case "birthday":
+                Console.Write("\n please re-enter your birthday (YYYYMMDD): ");
+                date = Convert.ToInt32(Console.ReadLine());
+                continue;
+            case "Student_ID":
+                Console.Write("\n please re-enter your student ID: ");
+                Student_ID = Console.ReadLine();
+                continue;
+            default:
+                Console.Write("\n Sorry, we do not have this information");
+                Console.WriteLine();
+                break;
+            }
+
+    }
+}
+
+// All data is correct, finish form. 
+while (a == "2");
+Console.WriteLine("\n Thank you for your time");
